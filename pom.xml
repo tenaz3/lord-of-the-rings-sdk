@@ -15,9 +15,9 @@
     </prerequisites>
 
     <scm>
-        <connection>scm:git@github.com:tenaz3/lord-of-the-rings-sdk.git</connection>
-        <developerConnection>scm:git@github.com:tenaz3/lord-of-the-rings-sdk.git</developerConnection>
-        <url>https://github.com/tenaz3/lord-of-the-rings-sdk</url>
+        <connection>scm:git@github.com:tenaz3/nilson-magalhaes-SDK.git</connection>
+        <developerConnection>scm:git@github.com:tenaz3/nilson-magalhaes-SDK.git</developerConnection>
+        <url>https://github.com/tenaz3/nilson-magalhaes-SDK</url>
     </scm>
 
     <properties>
