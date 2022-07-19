@@ -1,4 +1,4 @@
-# swagger-java-client
+# Lord of the rings SDK
 
 LOTR API
 
@@ -60,7 +60,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/swagger-java-client-1.0.0.jar`
+* `target/lord-of-the-rings-sdk-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -72,22 +72,19 @@ import org.liblab.client.Configuration;
 import org.liblab.client.api.LotrApi;
 import org.liblab.client.model.*;
 
-import java.io.File;
-import java.util.*;
-
 public class DefaultApiExample {
 
-    public static void main(String[] args) {
-        final var accessToken = "TOKEN";
-        final LotrApi api = new LotrApi(new Configuration().setAccessToken(accessToken));
-        try {
-            Book result = api.getBooks().getBooks().get(0);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#getBooks");
-            e.printStackTrace();
-        }
+  public static void main(String[] args) {
+    final var accessToken = "TOKEN";
+    final LotrApi api = new LotrApi(new Configuration().setAccessToken(accessToken));
+    try {
+      Book result = api.getBooks().getData().get(0);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#getBooks");
+      e.printStackTrace();
     }
+  }
 }
 ```
 
@@ -105,3 +102,13 @@ issues.
 ## Author
 
 tenaz3.comp@gmail.com
+
+
+## TODO
+
+* Pagination
+  * limit 
+  * page
+  * offset
+* Sort
+* Aggregate calls in a generic response data
