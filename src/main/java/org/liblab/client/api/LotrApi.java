@@ -1,12 +1,11 @@
 package org.liblab.client.api;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.squareup.okhttp.Call;
 import org.liblab.client.ApiClient;
 import org.liblab.client.Configuration;
 import org.liblab.client.Pair;
-import client.model.*;
 import org.liblab.client.model.Character;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.squareup.okhttp.Call;
 import org.liblab.client.model.*;
 
 import java.util.ArrayList;

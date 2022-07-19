@@ -1,15 +1,16 @@
 # swagger-java-client
 
 LOTR API
+
 - API version: 1.0.0
-  - Build date: 2022-07-19T15:04:09.670Z[GMT]
+    - Build date: 2022-07-19T15:04:09.670Z[GMT]
 
 You can use this api to retrieve lotr information.
-
 
 ## Requirements
 
 Building the API client library requires:
+
 1. Java 18+
 2. Maven
 
@@ -32,11 +33,12 @@ mvn clean deploy
 Add this dependency to your project's POM:
 
 ```xml
+
 <dependency>
-  <groupId>org.liblab</groupId>
-  <artifactId>lord-of-the-rings-sdk</artifactId>
-  <version>1.0.0</version>
-  <scope>compile</scope>
+    <groupId>org.liblab</groupId>
+    <artifactId>lord-of-the-rings-sdk</artifactId>
+    <version>1.0.0</version>
+    <scope>compile</scope>
 </dependency>
 ```
 
@@ -66,10 +68,9 @@ Then manually install the following JARs:
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.DefaultApi;
+import org.liblab.client.Configuration;
+import org.liblab.client.api.LotrApi;
+import org.liblab.client.model.*;
 
 import java.io.File;
 import java.util.*;
@@ -77,10 +78,10 @@ import java.util.*;
 public class DefaultApiExample {
 
     public static void main(String[] args) {
-        
-        DefaultApi apiInstance = new DefaultApi();
+        final var accessToken = "TOKEN";
+        final LotrApi api = new LotrApi(new Configuration().setAccessToken(accessToken));
         try {
-            BookResponse result = apiInstance.getBooks();
+            Book result = api.getBooks().getBooks().get(0);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#getBooks");
@@ -88,62 +89,18 @@ public class DefaultApiExample {
         }
     }
 }
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.DefaultApi;
-
-import java.io.File;
-import java.util.*;
-
-public class DefaultApiExample {
-
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-        DefaultApi apiInstance = new DefaultApi();
-        String _id = "_id_example"; // String | 
-        try {
-            CharacterResponse result = apiInstance.getCharacter(_id);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#getCharacter");
-            e.printStackTrace();
-        }
-    }
-}
 ```
-
-## Documentation for API Endpoints
-
-All URIs are relative to *https://the-one-api.dev/v2*
-
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*DefaultApi* | [**getBooks**](docs/DefaultApi.md#getBooks) | **GET** /book | 
-*DefaultApi* | [**getCharacter**](docs/DefaultApi.md#getCharacter) | **GET** /character | 
-
-## Documentation for Models
-
- - [Book](docs/Book.md)
- - [BookResponse](docs/BookResponse.md)
- - [Character](docs/Character.md)
- - [CharacterResponse](docs/CharacterResponse.md)
- - [InlineResponse401](docs/InlineResponse401.md)
- - [OneOfCharacterBirth](docs/OneOfCharacterBirth.md)
- - [OneOfCharacterDeath](docs/OneOfCharacterDeath.md)
 
 ## Documentation for Authorization
 
 Authentication schemes defined for the API:
+
 ### bearerAuth
-
-
 
 ## Recommendation
 
-It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
+It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential
+issues.
 
 ## Author
 
