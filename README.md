@@ -112,3 +112,4 @@ tenaz3.comp@gmail.com
   * offset
 * Sort
 * Aggregate calls in a generic response data
+* Publish mvnrepository
