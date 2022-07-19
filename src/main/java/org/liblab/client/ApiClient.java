@@ -1,6 +1,6 @@
-package client;
+package org.liblab.client;
 
-import client.auth.BearerTokenAuth;
+import org.liblab.client.auth.BearerTokenAuth;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

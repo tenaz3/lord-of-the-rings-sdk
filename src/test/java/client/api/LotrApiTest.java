@@ -1,10 +1,11 @@
 package client.api;
 
-import client.Configuration;
-import client.model.*;
-import client.model.Character;
+import org.liblab.client.Configuration;
+import org.liblab.client.api.LotrApi;
+import org.liblab.client.model.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.Test;
+import org.liblab.client.model.Character;
 
 import static org.junit.Assert.assertEquals;
 

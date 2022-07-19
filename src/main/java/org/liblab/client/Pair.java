@@ -1,4 +1,4 @@
-package client;
+package org.liblab.client;
 
 public class Pair {
 

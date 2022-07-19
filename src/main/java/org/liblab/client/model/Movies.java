@@ -1,4 +1,4 @@
-package client.model;
+package org.liblab.client.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package client.auth;
+package org.liblab.client.auth;
 
 import java.util.Map;
 
